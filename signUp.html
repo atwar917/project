@@ -1,0 +1,112 @@
+<html>
+    <head>
+      <title>Sign Up Form</title>
+      <link rel="stylesheet" href="style.css">
+      <style>
+        .sign-up-form
+        {
+            width: 300px;
+                box-shadow: 0 0 3px 0 rgba(0,0,0,3);
+                background: #f9a22f;
+                padding: 20px;
+                margin: 8% auto 0;
+                text-align: center;
+        }
+        .sign-up-form h1
+        {
+            color: #d04522;
+            margin-bottom: 30px;
+
+        }
+        .input-box
+        {
+            border-radius: 20px;
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border: 1px solid #999;
+            outline: none;
+        }
+        button
+        {
+            color: #fff;
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 15px;
+            margin: 10px 0;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .signup-btn
+        {
+            background-color: #0e9afe;
+        }
+        a
+        {
+            text-decoration: none;
+        }
+        hr
+        {
+            margin-top: 20px;
+            width: 80%;
+        }
+        /*button*/
+        img
+        {
+            width: 100px;
+            margin-top: -50px;
+        }
+        /* Footer */
+        footer {
+          padding: 10px 20px;
+          background: #333;
+          color: white;
+        }
+      </style>
+
+      
+    </head>
+    <body  style="background-color:rgb(149, 231, 169);" >
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="topnav">
+          <a class="nav-link " href="index.html">Home</a>
+          <a class="nav-link " href="menu.html">Menu</a>
+          <div class="topnav-right">
+            <a class="active" href="#home">Sign Up</a>
+            <a href="./login.html">Login</a>
+          </div>
+        </div>
+        
+      </nav>
+
+      <div class ="sign-up-form">
+          
+        <h1> Sign Up Now </h1>
+        <form>
+          <h2>Account Information</h2>
+          <label for="fname">Enter Email:</label><br>
+          <input type="email" class="input-box">
+          <label for="fname">Enter Password:</label><br>
+          <input type="password" class="input-box">
+          <label for="fname">Confirm Password:</label><br>
+          <input type="password" class="input-box">
+        </form>
+        <form>
+          <h2>Your Information</h2>
+          <label for="fname">First name:</label><br>
+          <input type="text" class="input-box">
+          <label for="lname">Last name:</label><br>
+          <input type="text" class="input-box">
+
+          <p>I agree to the terms of services</p>
+          <p class="submit"><input type = "submit" name = "commit" value="Sign Up"></p>    
+        </form>
+      </div>
+    </body>
+    <footer>
+      <p>Retiever Delivery System © 2023. All rights reserved.</p>
+    </footer>
+</html>
+  

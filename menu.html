@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pizza System</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <!-- Style Code -->
+  <style>
+    /* Optional CSS styles for menu appearance */
+    ul.menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+ 
+ 
+    ul.menu li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+ 
+ 
+    ul.menu li a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+ 
+ 
+    ul.menu li a:hover {
+      background-color: #ddd;
+    }
+   
+    /* CSS styles for ingredient buttons */
+    .ingredient-btn {
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+   
+    .ingredient-btn:hover {
+      background-color: #45a049;
+    }
+   
+    /* CSS styles for shopping cart */
+    .shopping-cart {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border: 1px solid #ddd;
+      margin-top: 20px;
+    }
+   
+    .cart-item {
+      margin-bottom: 5px;
+    }
+   
+    .total-price {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+  <body  style="background-color:rgb(149, 231, 169);" >
+    <!-- Nav Code -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="topnav">
+        <a class="nav-link " href="index.html">Home</a>
+        <a class="active" href="#home">Menu</a>
+        <div class="topnav-right">
+          <a href="./signUp.html">Sign Up</a>
+          <a href="./login.html">Login</a>
+        </div>
+      </div>
+    </nav>
+    
+    <h1>Reteriver Pizza Menu</h1>
+    
+    <input type="radio" name="base" value="small" onchange="updateCart()"> Small
+    <input type="radio" name="base" value="medium" onchange="updateCart()"> Medium
+    <input type="radio" name="base" value="large" onchange="updateCart()"> Large
+
+    <h2>Choose pizza toppings:</h2>
+    <h3>Sauce</h3>
+    <button class="ingredient-btn" onclick="addToCart('BBQ Sauce', 0)">BBQ Sauce</button>
+    <button class="ingredient-btn" onclick="addToCart('Garlic Rub', 0)">Garlic Rub</button>
+    <button class="ingredient-btn" onclick="addToCart('Pesto', 0)">Pesto</button>
+    <button class="ingredient-btn" onclick="addToCart('Red Sauce', 0)">Red Sauce</button>
+    <button class="ingredient-btn" onclick="addToCart('Spicy Chilli Red Sauce', 0)">Spicy Chilli Red Sauce</button>
+    <button class="ingredient-btn" onclick="addToCart('White Sauce', 0)">White Sauce</button>
+
+    <h3>Cheese</h3>
+    <button class="ingredient-btn" onclick="addToCart('Mozzarella', 0)">Mozzarella</button>
+    <button class="ingredient-btn" onclick="addToCart('Feta', 0)">Feta</button>
+    <button class="ingredient-btn" onclick="addToCart('Parmesan', 0)">Parmesan</button>
+    <button class="ingredient-btn" onclick="addToCart('Asiago', 0)">Asiago</button>
+    <button class="ingredient-btn" onclick="addToCart('No Cheese', 0)">No Cheese</button>
+
+    <h3>Meats</h3>
+    <button class="ingredient-btn" onclick="addToCart('BBQ Sauce', 0)">Chicken</button>
+    <button class="ingredient-btn" onclick="addToCart('Garlic Rub', 0)">Spicy Chicken</button>
+    <button class="ingredient-btn" onclick="addToCart('Pesto', 0)">Grilled Chicken</button>
+    <button class="ingredient-btn" onclick="addToCart('Red Sauce', 0)">Ground Beef</button>
+    <button class="ingredient-btn" onclick="addToCart('Spicy Chilli Red Sauce', 0)">Pepperoni</button>
+    <button class="ingredient-btn" onclick="addToCart('White Sauce', 0)">Salami</button>
+    <button class="ingredient-btn" onclick="addToCart('Wagyu Beef', 3.5)">Wagyu Beef ($3.50)</button>
+    <button class="ingredient-btn" onclick="addToCart('Calamari', 3.5)">Calamari ($3.50)</button>
+
+    <h3>Veggies, Etc</h3>
+    <button class="ingredient-btn" onclick="addToCart('Corn', 0)">Corn</button>
+    <button class="ingredient-btn" onclick="addToCart('Garlic', 0)">Garlic</button>
+    <button class="ingredient-btn" onclick="addToCart('Green Bell Pepper', 0)">Green Bell Pepper</button>
+    <button class="ingredient-btn" onclick="addToCart('Red Bell Pepper', 0)">Red Bell Pepper</button>
+    <button class="ingredient-btn" onclick="addToCart('Mushroom', 0)">Mushroom</button>
+    <button class="ingredient-btn" onclick="addToCart('Jalepenos', 0)">Jalepenos</button>
+    <button class="ingredient-btn" onclick="addToCart('Onion', 0)">Onion</button>
+    <button class="ingredient-btn" onclick="addToCart('Pineapple', 0)">Pineapple</button>
+    <button class="ingredient-btn" onclick="addToCart('Spinach', 0)">Spinach</button>
+    <button class="ingredient-btn" onclick="addToCart('Tomato Diced', 0)">Tomato Diced</button>
+    <button class="ingredient-btn" onclick="addToCart('Rosemary', 0)">Rosemary</button>
+    <button class="ingredient-btn" onclick="addToCart('Salt & Pepper', 0)">Salt & Pepper</button>
+    
+    <div class="shopping-cart">
+    <h3>Shopping</h3>
+    <div id="cart-items"></div>
+    
+    <div id="delivery-charge">Delivery Charge: $2.50</div>
+    <div id="base-price"></div>
+    <div id="total-price"></div>
+      
+
+    </div>
+
+
+    <script>
+      var cart = [];
+      var basePrice = {
+        small: 8,
+        medium: 9.50,
+        large: 12
+      };
+      var ingredientPrice = {
+        pepperoni: 1.99,
+        mushrooms: 0.99,
+        onions: 0.79
+      };
+
+      function addToCart(itemName, price) {
+        var item = {
+          name: itemName,
+          price: price
+        };
+
+        cart.push(item);
+        updateCart();
+      }
+
+      function updateCart() {
+        var cartItemsDiv = document.getElementById("cart-items");
+        cartItemsDiv.innerHTML = "";
+
+        var totalPrice = 0;
+        for (var i = 0; i < cart.length; i++) {
+          var item = cart[i];
+          totalPrice += item.price;
+
+          var cartItem = document.createElement("div");
+          cartItem.classList.add("cart-item");
+          cartItem.textContent = item.name + " - $" + item.price.toFixed(2);
+          cartItemsDiv.appendChild(cartItem);
+        }
+
+        var baseRadios = document.getElementsByName("base");
+        var selectedBase;
+        for (var i = 0; i < baseRadios.length; i++) {
+          if (baseRadios[i].checked) {
+            selectedBase = baseRadios[i].value;
+            break;
+          }
+        }
+
+        if (selectedBase) {
+          var basePrice = {
+            small: 8,
+            medium: 9.5,
+            large: 12
+          };
+          totalPrice += basePrice[selectedBase];
+        }
+
+        var totalDiv = document.createElement("div");
+        totalDiv.classList.add("total-price");
+        totalDiv.textContent = "Total: $" + totalPrice.toFixed(2);
+        cartItemsDiv.appendChild(totalDiv);
+      }
+        
+        totalPrice += deliveryCharge;
+    </script>
+</body>
+</html>

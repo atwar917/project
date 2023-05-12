@@ -1,2 +1,109 @@
-new
-changes
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pizza System</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      /* Create two unequal columns that floats next to each other */
+      .column {
+        float: left;
+        padding: 10px;
+        column-width: auto;
+      }
+      
+      .left {
+        width: 20%;
+      }
+      
+      .right {
+        width: 80%;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Footer */
+      footer {
+        padding: 10px 20px;
+        background: #333;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Nav Code -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a class="nav-link " href="menu.html">Menu</a>
+        <div class="topnav-right">
+          <a href="./signUp.html">Sign Up</a>
+          <a href="./login.html">Login</a>
+        </div>
+      </div>
+
+    </nav>
+    <div class="row">
+      <div class="column left" style="background-color:#95e7a9;">
+        <h2>Address</h2>
+        <h4>1234 Delivery Rd</h4>
+        <h4>Baltimore, MD 21228</h4>
+        <h4>(443) 387-9872</h4>
+        <h2>Hour</h2>
+        <h3>Pick-Up Hours</h3>
+        <ul>
+          <li>Monday-Thursday: 11am-10pm</li>
+          <li>Friday: 9am-1am</li>
+          <li>Saturday-Sunday: 10am-1am</li>
+        </ul>
+        <h3>Online Hours</h3>
+        <h4>24/7</h4>
+        <h2>About Us</h2>
+        <h3>We are accomodate to all your food need.</h3>
+        <ul>
+          <li>Keto</li>
+          <li>Halal</li>
+          <li>Pescitarian</li>
+          <li>Vegetarian</li>
+        </ul>
+      </div>
+      <div class="column right" style="background-color:#ffff97;">
+        <h1>Home is where the food is </h1>
+        <div class="restaurant_dets">
+          <h3 class="mt20" >Our Restaurant <span class="shade-left">&nbsp;</span></h3>
+            <div class="pt10" > Reteriver's Pizza is in the heart of Catonsville,
+              Maryland providing pizza delivery to all of our nearby friends & family.
+              As UMBC almus we have a special place in our hearts for all the students
+              staying up late and pulling all nighters, we pride oursleves on staying
+              open late and bringing food to fuel to all reterivers in need.
+            </div>
+        </div>
+        <h1>Retriever Delivery System</h1>
+        <h2>Todays Favorite Deals</h2>
+        <h3>Vegetarian</h3>
+        <img src="vegetarian.jpg" alt="Vegetarian">
+        <div class="pt10">Customer Favorite: Vegetarian</div>
+        <div class="pt10"></div>Pizza base, Marinara Sauce, Mozzarella Cheese, onion, bell peper, corn, and a nice
+          sprinkly of parmesan on top.</div>
+
+      </div>
+    </div>
+
+  </body>
+
+  <footer>
+    <p>Retiever Delivery System © 2023. All rights reserved.</p>
+  </footer>
+</html>
