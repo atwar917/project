@@ -9,7 +9,7 @@ $sql = "insert into CustomerOrder_T (cid,ccid,total_price)
         values ('$cid', '$ccid', '$total_price');
 
 if ($conn->query($sql)== TRUE) {
-    echo "order created successfully";
+    ECHO "Order created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

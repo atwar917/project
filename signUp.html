@@ -86,22 +86,48 @@
         <h1> Sign Up Now </h1>
         <form>
           <h2>Account Information</h2>
-          <label for="fname">Enter Email:</label><br>
-          <input type="email" class="input-box">
-          <label for="fname">Enter Password:</label><br>
-          <input type="password" class="input-box">
-          <label for="fname">Confirm Password:</label><br>
-          <input type="password" class="input-box">
-        </form>
-        <form>
-          <h2>Your Information</h2>
-          <label for="fname">First name:</label><br>
-          <input type="text" class="input-box">
-          <label for="lname">Last name:</label><br>
-          <input type="text" class="input-box">
+          <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script defer src="Login.js"></script>
+<link href="Login.css" rel="stylesheet">
+</head>
+<body>
 
-          <p>I agree to the terms of services</p>
-          <p class="submit"><input type = "submit" name = "commit" value="Sign Up"></p>    
+<section class="container">
+<div class="container">
+	<div class="header">
+		<h2>Create Account</h2>
+	</div>
+	<form id="form" class="form" method="post" action="login.php">
+		<div class="form-control">
+			<label for="username">Username</label>
+			<input type="text" placeholder="example" id="username" />
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label for="username">Email</label>
+			<input type="email" placeholder="example@email.com" id="email" />			
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label for="username">Password</label>
+			<input type="password" placeholder="Password" id="password"/>			
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label for="username">Password check</label>
+			<input type="password" placeholder="Repeat Password" id="password2"/>			
+			<small>Error message</small>
+		</div>
+		<button type="submit" name="commit" value="Login">Submit</button>
+	</form>
+</div>
+
+</body>
+</html>
         </form>
       </div>
     </body>
