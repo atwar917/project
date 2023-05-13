@@ -1,6 +1,5 @@
 <?php
  require 'dbconn.php';
-
 $cid = $_POST['cid'];
 $ccid = $_POST['ccid'];
 
