@@ -139,7 +139,12 @@
     <div id="base-price"></div>
     <div id="total-price"></div>
     <div class ="shopping-cart">
-    <button class="order-btn" onclick="alert('Your order has been placed!')"> Order Now</button>
+      <button onclick="redirectToOrder()">Place Order</button>
+      <script>
+        function redirectToOrder(){
+          window.locaiton.href="order.php";
+        }
+      </script>
     </div>
 
     </div>
