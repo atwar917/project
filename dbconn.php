@@ -7,7 +7,8 @@ $password = "tvu8";
 $dbname = "tvu8";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname)
+    or die("Couldn't connect to database");
 
 // Check connection
 if (!$conn) {
