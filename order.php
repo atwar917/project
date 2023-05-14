@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pizza System</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
 <?php
  require 'dbconn.php';
 $cid = $_POST['cid'];
@@ -52,4 +62,5 @@ $conn->close();
 
 
  ?>
- 
+
+</html>
