@@ -1,8 +1,8 @@
 # IS436-project: Retriever Delivery System
 
-##Our project is about creating a delivery system that accomodates all people needs. As there is many dietary restrictions, it will be nice for them to be able to get affordable and easy food to their choosen location.
+#Our project is about creating a delivery system that accomodates all people needs. As there is many dietary restrictions, it will be nice for them to be able to get affordable and easy food to their choosen location.
 
-##We are specifically making this for our stakeholder **Joseph Scotch** who wants this system to bring in profit while achieving a food goal.
+#We are specifically making this for our stakeholder **Joseph Scotch** who wants this system to bring in profit while achieving a food goal.
 
 ##Files
 ###index.html
