@@ -13,5 +13,5 @@ Files
 * order.php: database with html code that allows users to add their choices of food to the menu.
 * signUp.html: Like login.html, this webiste takes in the information of the user to create an account into SignUp.php
 * SignUp.php: The database code for signUp.html is stored here.
-* sytle.css: Stores Nav bar information
+* style.css: Stores Nav bar information
 
