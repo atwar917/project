@@ -1,13 +1,13 @@
 # IS436-project: Retriever Delivery System
 
-#Our project is about creating a delivery system that accomodates all people needs. As there is many dietary restrictions, it will be nice for them to be able to get affordable and easy food to their choosen location.
+Our project is about creating a delivery system that accomodates all people needs. As there is many dietary restrictions, it will be nice for them to be able to get affordable and easy food to their choosen location.
 
-#We are specifically making this for our stakeholder **Joseph Scotch** who wants this system to bring in profit while achieving a food goal.
+We are specifically making this for our stakeholder **Joseph Scotch** who wants this system to bring in profit while achieving a food goal.
 
-##Files
-###index.html
+Files
+index.html
 * The main home file of the pizza website. Only consists of html code.
-###login.html
+login.html
 * Html login code to make the box the users can connect to.
 ###login.php
 * Database code that connects the user to the login information in the table, ensuring they are in the system.
